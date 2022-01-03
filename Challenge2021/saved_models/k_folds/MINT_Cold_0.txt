@@ -1,0 +1,1 @@
+{"ICM_weight": 0.0001, "topK": 250, "shrink": 146, "similarity": "cosine", "normalize": true, "feature_weighting": "none", "epochs": 30, "num_factors": 76, "alpha": 0.49999999999999994, "epsilon": 0.01, "reg": 1e-05, "init_mean": 0.5, "init_std": 0.5397834449099546, "w": 0.5043106231030561, "norm": true}

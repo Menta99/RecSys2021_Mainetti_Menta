@@ -1,0 +1,1 @@
+{"epochs": 275, "allow_train_with_sparse_weights": true, "symmetric": true, "lambda_i": 0.0010111117348410076, "lambda_j": 0.005720923987742486, "learning_rate": 0.00399113040527899, "topK": 239, "sgd_mode": "adadelta", "gamma": 0.6719613126220046, "beta_1": 0.7973351763015564, "beta_2": 0.6421367248022279}
