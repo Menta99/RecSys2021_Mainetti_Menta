@@ -45,7 +45,7 @@ Our best model was in fact a **Collaborative Stratified Hybrid**, composed by di
 In particular the final structure was the following:
 
 <p align="center">
-	<img src="diagram.png" alt="Diagram"/>
+	<img src="diagram.jpg" alt="Diagram"/>
 </p>
 
 
