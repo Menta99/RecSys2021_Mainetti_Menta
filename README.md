@@ -35,7 +35,7 @@ we discovered in fact the following singularities:
 * Then we **profiled** the base models to find the best performers, both in general and in the different 
 user segments (**cold**, **warm** and **hot**).
 * The next phase was focused on building **hybrids**, mainly composed by **2 models** at time in order 
-to better control their optimization
+to better control their optimization.
 
 ## Best Model
 
@@ -48,4 +48,24 @@ In particular the final structure was the following:
 	<img src="diagram.jpg" alt="Diagram"/>
 </p>
 
+We opted for a hierarchical structure that increasely improved the performance of each submodel. 
+1. We first separately trained and fine-tuned the base models: 
+	- **SLIM Elastic-Net**, that reached a MAP of 0.2501 on the validation set
+	- **SLIM-BPR**, that was trained on the Cold user segment reaching a MAP of 0.1446 on the validation set
+2. Then we built our **MINT_Cold_v2** hybrid, we co-trained two models: 
+	- IALS 
+	- MINT_KNN_Hybrid, another hybrid made of ItemKNNCF and UserKNNCF
+- The MINT_Cold_v2 was again trained on the Cold user segment reaching a MAP of 0.1604 on the validation set
+3. At this point we created the **Final_Cold_Hybrid** linearly combining the two models trained on the Cold user segment:
+	- SLIM_BPR
+	- MINT_Cold_v2
+- This model reached a MAP of 0.1684 on the validation set considering only the Cold user segment
+4. Our **Final_Hybrid** was built segmenting the users (the sizes of the user segments are an hyper-parameter of the model) and linearly combining:
+	- SLIM Elastic-Net
+	- Final_Cold_Hybrid
+- The Final_Hybrid reached a MAP of 0.2575 on the validation set and a MAP of **0.5091** on the test set (public leaderboard).
 
+
+## Group Members
+- [__Lorenzo Mainetti__](https://github.com/LorenzoMainetti)
+- [__Andrea Menta__](https://github.com/Menta99)
