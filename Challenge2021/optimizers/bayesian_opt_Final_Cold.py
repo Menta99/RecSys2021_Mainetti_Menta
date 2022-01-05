@@ -38,8 +38,7 @@ print("Models performances: \nSLIM_BPR_ALL: " + str(evaluator_val_tot.evaluateRe
       + "\nMINT_Cold_IALS_v2_ALL: " + str(evaluator_val_tot.evaluateRecommender(model_2)[0]["MAP"][10]))
 
 hyper_parameters_range_dictionary = {
-    "alpha": Real(low=1e-3, high=1.0, prior='log-uniform'),
-    "normalize": Categorical([True, False])
+    "alpha": Real(low=1e-3, high=1.0, prior='log-uniform')
 }
 
 recommender_class = MINT_ScoresHybridRecommender2
