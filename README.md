@@ -51,7 +51,7 @@ In particular the final structure was the following:
 	<img src="assets/diagram.jpg" alt="Diagram"/>
 </p>
 
-We opted for a hierarchical structure that increasely improved the performance of each submodel. 
+We opted for a hierarchical structure that increasingly improved the performance of each submodel. 
 1. We first separately trained and fine-tuned the base models: 
 	- **SLIM Elastic-Net**, that reached a MAP of 0.2501 on the validation set
 	- **SLIM-BPR**, that was trained on the Cold user segment reaching a MAP of 0.1446 on the validation set
