@@ -40,6 +40,8 @@ user segments (**cold**, **warm** and **hot**).
 * The next phase was focused on building **hybrids**, mainly composed by **2 models** at time in order 
 to better control their optimization.
 
+[Here](https://github.com/Menta99/RecSys2021_Mainetti_Menta/blob/main/Presentation.pdf) a more complete presentation of the steps that we followed towards our best model.
+
 ## Best Model
 
 The **ICMs** were not so effective in our experiments, thus we decided to focus on the information contained in the **URM**.
